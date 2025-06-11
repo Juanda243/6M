@@ -1,0 +1,129 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ffe0ec, #fefefe);
+  overflow: hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.zona {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.zona:hover {
+  transform: scale(1.05);
+  background: rgba(255, 192, 203, 0.3);
+}
+
+.centro {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 10;
+}
+
+.centro h1 {
+  font-size: 2.5rem;
+  color: #d6336c;
+  margin-bottom: 1rem;
+}
+
+.centro p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.zona1 { grid-column: 2 / 3; grid-row: 1 / 2; }
+.zona2 { grid-column: 3 / 4; grid-row: 1 / 2; }
+.zona3 { grid-column: 3 / 4; grid-row: 2 / 3; }
+.zona4 { grid-column: 1 / 2; grid-row: 2 / 3; }
+.zona5 { grid-column: 1 / 2; grid-row: 1 / 2; }
+.zona6 { grid-column: 2 / 3; grid-row: 3 / 4; }
+.zona7 { grid-column: 3 / 4; grid-row: 3 / 4; }
+.zona8 { grid-column: 1 / 2; grid-row: 3 / 4; }
+
+.contador-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#contador {
+  background-color: #f0f0f0;
+  color: #d6336c;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  margin: 1rem auto;
+}
+
+#contador {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+
+
+
+/* ----- Estilos responsivos para pantallas pequeñas ----- */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .zona {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .centro {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .centro h1 {
+    font-size: 1.6rem;
+  }
+
+  .centro p {
+    font-size: 1rem;
+  }
+
+  #contador {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    font-size: 1.2rem;
+    padding: 1rem;
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+}

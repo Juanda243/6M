@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Una flor para ti</title>
+  <link rel="icon" type="image/png" href="images/Copilot_20250604_150736.png">
+  <link rel="stylesheet" href="flores.css">
+</head>
+<body>
+  <audio id="bg-music" autoplay loop>
+    <source src="cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+<center>
+  <a href="index.html" class="boton">Volver</a>
+  </center>
+
+  <div class="fondo">
+    <img src="images/tulipanes1.png" alt="Ramo de tulipanes" class="tulipanes" onclick="mostrarHoja()">
+    <img src="images/hoja.png" alt="Hoja con mensaje" class="hoja" id="hoja">
+    
+    <!-- Galería de fotos -->
+    <img src="images/img1.jpg" class="foto" style="top: 10%; left: 5%;">
+    <img src="images/IMG-20250329-WA0037.jpg" class="foto" style="top: 20%; right: 10%;">
+    <img src="images/img2.jpg" class="foto" style="bottom: 15%; left: 10%;">
+    <img src="images/img3.jpg" class="foto" style="bottom: 10%; right: 5%;">
+    <img src="images/IMG-20250329-WA0036.jpg" class="foto" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+  </div>
+
+  <script>
+    function mostrarHoja() {
+      const hoja = document.getElementById('hoja');
+      hoja.style.bottom = '30%';
+      hoja.style.opacity = 1;
+    }
+  </script>
+</body>
+</html>

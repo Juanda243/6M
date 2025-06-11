@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tus canciones</title>
+  <link rel="icon" type="image/png" href="images/Copilot_20250604_151027-removebg-preview.png">
+  <link rel="stylesheet" href="musica.css">
+</head>
+<body>
+    <center>
+  <a href="index.html" class="boton">Volver</a>
+  </center>
+  <div class="contenedor">
+    <h1>🎶 Tus Canciones 💖</h1>
+    <p>Estas canciones me recuerdan a ti, mi amor.</p>
+
+    <audio id="player" controls autoplay>
+      <source src="audio/cancion1_cI3RQ7VO.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <div class="lista">
+      <ul>
+        <li>💗 <strong>Canción 1</strong> – Tu favorita</li>
+        <li>💗 <strong>Canción 2</strong> – Tu otra cancion favorita</li>
+        <li>💗 <strong>Canción 3</strong> – La que te gusta cantar</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const canciones = ["videoplayback", "cancion2.mp3", "cancion3.mp3"];
+    let indice = 0;
+    const player = document.getElementById('player');
+
+    player.addEventListener('ended', () => {
+      indice = (indice + 1) % canciones.length;
+      player.src = canciones[indice];
+      player.play();
+    });
+  </script>
+</body>
+</html>

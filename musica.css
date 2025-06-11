@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #ffe6f0 0%, #fff0f5 100%);
+  font-family: 'Segoe UI', sans-serif;
+  color: #a3005e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.boton {
+  display: inline-block; /* Permite que el botón se pueda dimensionar y posicionar como un bloque */
+  padding: 10px 20px; /* Añade espacio alrededor del texto */
+  background-color: pink; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  border-radius: 5px; /* Añade bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+  transition: transform 1s ease-in-out;
+}
+
+.boton:hover {
+  background-color: purple; /* Color de fondo al pasar el cursor */
+  transform: scale(1.2);
+}
+
+
+.contenedor {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.lista ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.lista li {
+  margin-bottom: 0.8rem;
+}

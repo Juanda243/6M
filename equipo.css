@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+  color: #003366;
+}
+
+.boton {
+  display: inline-block; /* Permite que el botón se pueda dimensionar y posicionar como un bloque */
+  padding: 10px 20px; /* Añade espacio alrededor del texto */
+  background-color: lightblue; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  border-radius: 5px; /* Añade bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+  transition: transform 1s ease-in-out;
+}
+
+.boton:hover {
+  background-color: blue; /* Color de fondo al pasar el cursor */
+  transform: scale(1.2);
+}
+
+
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #004b87;
+  word-wrap: break-word;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.collage img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.collage img:hover {
+  transform: scale(1.05);
+}
+
+.frases p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #002b5c;
+  background: #e6f3ff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+footer p {
+  margin-top: 3rem;
+  font-size: 1.3rem;
+  color: #004b87;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+
+  .contenedor {
+    padding: 1rem;
+  }
+
+  .frases p {
+    font-size: 1rem;
+  }
+
+  footer p {
+    font-size: 1.1rem;
+  }
+}

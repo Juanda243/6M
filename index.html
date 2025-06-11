@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz 6 Meses, Amor</title>
+  <link rel="icon" type="image/png" href="images/Copilot_20250604_150016.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grid-container">
+    <div class="zona zona1" onclick="location.href='flores.html'">🌷</div>
+    <div class="zona zona2"> 👑💕</div>
+    <div class="zona zona3" onclick="location.href='musica.html'">🎵</div>
+    <div class="zona zona4" onclick="location.href='equipo.html'">⚽</div>
+    <div class="zona centro">
+      <h1>Feliz 6 meses, mi amor 💖</h1>
+      <p>Gracias por hacer de cada día algo hermoso. Te amo con todo mi corazón, mi princesa.</p>
+    </div>
+    <div class="zona zona5" > 💖😍</div>
+    <div class="zona contador-box">
+  <h1 id="contador">0 meses, 0 horas, 0 segundos</h1>
+</div>
+   
+
+    <script>
+        let segundos = 6 * 30 * 24 * 3600; // Inicia en 6 meses (aprox.)
+
+        function actualizarContador() {
+            let meses = Math.floor(segundos / (30 * 24 * 3600)); // Cada mes tiene aprox. 30 días
+            let horas = Math.floor((segundos % (30 * 24 * 3600)) / 3600);
+            let segs = segundos % 3600;
+
+            document.getElementById("contador").innerText =
+                `${meses} meses, ${horas} horas, ${segs} segundos`;
+
+            segundos++; // Incrementa el tiempo
+        }
+
+        setInterval(actualizarContador, 1000); // Se actualiza cada segundo
+    </script>
+    <div class="zona zona7" > 👸💗</div>
+    <div class="zona zona8" > 😻💞</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
